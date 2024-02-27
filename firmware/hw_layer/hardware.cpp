@@ -75,7 +75,7 @@
 #endif
 
 #if HAL_USE_SPI
-extern bool isSpiInitialized[5];
+extern bool isSpiInitialized[SPI_TOTAL_COUNT];
 
 /**
  * Only one consumer can use SPI bus at a given time

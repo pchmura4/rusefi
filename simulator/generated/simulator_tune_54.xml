@@ -795,6 +795,8 @@
         <constant name="luaCanRxWorkaround">"false"</constant>
         <constant name="useAuxSpeedForSlipRatio">"false"</constant>
         <constant name="useVssAsSecondWheelSpeed">"false"</constant>
+        <constant name="is_enabled_spi_5">"false"</constant>
+        <constant name="is_enabled_spi_6">"false"</constant>
         <constant digits="0" name="afterCrankingIACtaperDuration" units="cycles">200.0</constant>
         <constant digits="0" name="iacByTpsTaper" units="percent">5.0</constant>
         <constant name="auxSerialTxPin">"NONE"</constant>
@@ -1816,7 +1818,7 @@
         <constant digits="0" name="simulatorCamPosition3" units="">0.0</constant>
         <constant digits="0" name="simulatorCamPosition4" units="">0.0</constant>
         <constant name="ignKeyAdcChannel">"Disabled"</constant>
-        <constant digits="0" name="unusedExplicitFilling2" units="">0.0</constant>
+        <constant name="spi6MisoMode">"default"</constant>
         <constant digits="3" name="triggerVVTGapOverrideFrom1" units="ratio">0.0</constant>
         <constant digits="3" name="triggerVVTGapOverrideFrom2" units="ratio">0.0</constant>
         <constant digits="3" name="triggerVVTGapOverrideFrom3" units="ratio">0.0</constant>
@@ -1866,33 +1868,24 @@
 </constant>
         <constant digits="0" name="auxSpeed1Multiplier" units="">1.0</constant>
         <constant digits="0" name="brakeMeanEffectivePressureDifferential" units="">0.0</constant>
-        <constant cols="1" digits="0" name="unusedOftenChangesDuringFirmwareUpdate" rows="146">
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
-         0.0
+        <constant name="spi4mosiPin">"NONE"</constant>
+        <constant name="spi4misoPin">"NONE"</constant>
+        <constant name="spi4sckPin">"NONE"</constant>
+        <constant name="spi5mosiPin">"NONE"</constant>
+        <constant name="spi5misoPin">"NONE"</constant>
+        <constant name="spi5sckPin">"NONE"</constant>
+        <constant name="spi6mosiPin">"NONE"</constant>
+        <constant name="spi6misoPin">"NONE"</constant>
+        <constant name="spi6sckPin">"NONE"</constant>
+        <constant name="spi4SckMode">"default"</constant>
+        <constant name="spi4MosiMode">"default"</constant>
+        <constant name="spi4MisoMode">"default"</constant>
+        <constant name="spi5SckMode">"default"</constant>
+        <constant name="spi5MosiMode">"default"</constant>
+        <constant name="spi5MisoMode">"default"</constant>
+        <constant name="spi6SckMode">"default"</constant>
+        <constant name="spi6MosiMode">"default"</constant>
+        <constant cols="1" digits="0" name="unusedOftenChangesDuringFirmwareUpdate" rows="120">
          0.0
          0.0
          0.0
@@ -4557,7 +4550,7 @@ end</constant>
          7000.0
 </constant>
     </page>
-    <versionInfo firmwareInfo="20240223" nPages="1" signature="rusEFI master.2024.02.26.f407-discovery.3555445838" version="5.0"/>
+    <versionInfo firmwareInfo="20240223" nPages="1" signature="rusEFI master.2024.02.27.f407-discovery.1260020285" version="5.0"/>
     <bibliography author="rusEFI 20240223" writeDate="date"/>
     <settings/>
     <userComments/>

@@ -1624,7 +1624,7 @@ uint8_t[CAM_INPUTS_COUNT iterate] simulatorCamPosition;
 
 adc_channel_e ignKeyAdcChannel
 
-uint8_t unusedExplicitFilling2
+	pin_mode_e spi6MisoMode;
 
 	float[VVT_TRACKING_LENGTH iterate] triggerVVTGapOverrideFrom;;"ratio", 1, 0, 0, 20, 3
 	float[VVT_TRACKING_LENGTH iterate] triggerVVTGapOverrideTo;;"ratio", 1, 0, 0, 20, 3
@@ -1642,7 +1642,30 @@ int8_t[TRACTION_CONTROL_ETB_DROP_SIZE x TRACTION_CONTROL_ETB_DROP_SIZE] traction
 
 float auxSpeed1Multiplier
 float brakeMeanEffectivePressureDifferential
-uint8_t[146] unusedOftenChangesDuringFirmwareUpdate;;"units", 1, 0, 0, 1, 0
+	Gpio spi4mosiPin;
+	Gpio spi4misoPin;
+	Gpio spi4sckPin;
+
+	Gpio spi5mosiPin;
+	Gpio spi5misoPin;
+	Gpio spi5sckPin;
+
+	Gpio spi6mosiPin;
+	Gpio spi6misoPin;
+	Gpio spi6sckPin;
+
+	pin_mode_e spi4SckMode;
+	pin_mode_e spi4MosiMode;
+	pin_mode_e spi4MisoMode;
+
+	pin_mode_e spi5SckMode;
+	pin_mode_e spi5MosiMode;
+	pin_mode_e spi5MisoMode;
+
+	pin_mode_e spi6SckMode;
+	pin_mode_e spi6MosiMode;
+
+uint8_t[120] unusedOftenChangesDuringFirmwareUpdate;;"units", 1, 0, 0, 1, 0
 
 ! end of engine_configuration_s
 end_struct
@@ -2315,3 +2338,4 @@ end_struct
 
 #define CAN_ECU_SERIAL_RX_ID 0x100
 #define CAN_ECU_SERIAL_TX_ID 0x102
+

@@ -1,4 +1,7 @@
+include ../java_tools/java_tools.mk
+
 INI_FILE = $(META_OUTPUT_ROOT_FOLDER)tunerstudio/generated/rusefi_$(SHORT_BOARD_NAME).ini
+SIG_FILE = $(PROJECT_DIR)/tunerstudio/generated/signature_$(SHORT_BOARD_NAME).txt
 
 CONFIG_FILES = \
   $(PROJECT_DIR)/$(INI_FILE) \
@@ -12,11 +15,14 @@ CONFIG_FILES = \
 
 .FORCE:
 
-$(ACOBJS): $(CONFIG_FILES)
+$(TCOBJS): $(CONFIG_FILES)
+
+$(SIG_FILE): .FORCE
+	bash $(PROJECT_DIR)/gen_signature.sh $(SHORT_BOARD_NAME)
 
 $(CONFIG_FILES): .config-sentinel ;
 
-.config-sentinel: .FORCE
+.config-sentinel: $(SIG_FILE) .FORCE
 ifneq (,$(CUSTOM_GEN_CONFIG))
 	bash $(PROJECT_DIR)/$(BOARD_DIR)/$(CUSTOM_GEN_CONFIG)
 else

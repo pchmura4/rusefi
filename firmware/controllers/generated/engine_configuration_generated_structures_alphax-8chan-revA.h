@@ -1,4 +1,4 @@
-// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Mon Feb 26 17:54:28 UTC 2024
+// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Tue Feb 27 01:09:55 UTC 2024
 // by class com.rusefi.output.CHeaderConsumer
 // begin
 #pragma once
@@ -4572,7 +4572,7 @@ struct engine_configuration_s {
 	/**
 	 * offset 4383
 	 */
-	uint8_t unusedExplicitFilling2;
+	pin_mode_e spi6MisoMode;
 	/**
 	 * units: ratio
 	 * offset 4384
@@ -4635,10 +4635,78 @@ struct engine_configuration_s {
 	 */
 	float brakeMeanEffectivePressureDifferential;
 	/**
-	 * units: units
 	 * offset 4560
 	 */
-	uint8_t unusedOftenChangesDuringFirmwareUpdate[146];
+	Gpio spi4mosiPin;
+	/**
+	 * offset 4562
+	 */
+	Gpio spi4misoPin;
+	/**
+	 * offset 4564
+	 */
+	Gpio spi4sckPin;
+	/**
+	 * offset 4566
+	 */
+	Gpio spi5mosiPin;
+	/**
+	 * offset 4568
+	 */
+	Gpio spi5misoPin;
+	/**
+	 * offset 4570
+	 */
+	Gpio spi5sckPin;
+	/**
+	 * offset 4572
+	 */
+	Gpio spi6mosiPin;
+	/**
+	 * offset 4574
+	 */
+	Gpio spi6misoPin;
+	/**
+	 * offset 4576
+	 */
+	Gpio spi6sckPin;
+	/**
+	 * offset 4578
+	 */
+	pin_mode_e spi4SckMode;
+	/**
+	 * offset 4579
+	 */
+	pin_mode_e spi4MosiMode;
+	/**
+	 * offset 4580
+	 */
+	pin_mode_e spi4MisoMode;
+	/**
+	 * offset 4581
+	 */
+	pin_mode_e spi5SckMode;
+	/**
+	 * offset 4582
+	 */
+	pin_mode_e spi5MosiMode;
+	/**
+	 * offset 4583
+	 */
+	pin_mode_e spi5MisoMode;
+	/**
+	 * offset 4584
+	 */
+	pin_mode_e spi6SckMode;
+	/**
+	 * offset 4585
+	 */
+	pin_mode_e spi6MosiMode;
+	/**
+	 * units: units
+	 * offset 4586
+	 */
+	uint8_t unusedOftenChangesDuringFirmwareUpdate[120];
 	/**
 	 * need 4 byte alignment
 	 * units: units
@@ -5557,4 +5625,4 @@ struct persistent_config_s {
 static_assert(sizeof(persistent_config_s) == 22236);
 
 // end
-// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Mon Feb 26 17:54:28 UTC 2024
+// this section was generated automatically by rusEFI tool config_definition-all.jar based on (unknown script) integration/rusefi_config.txt Tue Feb 27 01:09:55 UTC 2024
